@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  dagster:
+    build: .
+    container_name: ecommerce-dagster
+    ports:
+      - "3000:3000"  # Dagster UI
+      - "3001:3001"  # Dagster daemon port
+    volumes:
+      - ./data:/app/data
+      - ./dagster_project:/app/dagster_project
+      - ./dbt_project:/app/dbt_project
+      - ./configs:/app/configs
+      - ./scripts:/app/scripts
+    environment:
+      - DAGSTER_HOME=/app/.dagster
+      - PYTHONPATH=/app
+    env_file:
+      - .env
+    command: dagster dev --host 0.0.0.0 --port 3000 --module-name dagster_project
+
+volumes:
+  ecommerce_data:
+    driver: local

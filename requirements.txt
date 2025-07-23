@@ -1,0 +1,24 @@
+# Core Dagster stack
+dagster==1.5.9
+dagster-webserver==1.5.9
+dagster-dbt==0.21.9
+dagster-duckdb==0.21.9
+
+# Database
+duckdb==0.9.2
+
+# Data processing
+pandas==2.1.4
+polars==0.20.2
+
+# Web scraping & APIs
+requests==2.31.0
+beautifulsoup4==4.12.2
+yfinance==0.2.28
+
+# Utilities
+python-dotenv==1.0.0
+pytest==7.4.4
+
+# Development Tools
+jupyter==1.0.0

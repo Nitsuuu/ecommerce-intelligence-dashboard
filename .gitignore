@@ -1,0 +1,30 @@
+# Environment files
+.env
+*.log
+
+# Data files
+data/*.duckdb*
+data/*.parquet
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Docker
+.docker/
+
+# Mac specific
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Dagster
+.dagster/
+.dagster_home/
+
+# dbt
+dbt_project/logs/
+dbt_project/target/
