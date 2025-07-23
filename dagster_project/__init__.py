@@ -1,4 +1,4 @@
 from dagster import Definitions
 
-# For now, just empty definitions - we'll add assets later
+# For now, just empty definitions
 defs = Definitions()
